@@ -1,0 +1,17 @@
+#2. Receba 15 números inteiros e armazene-os em uma lista. Depois: crie uma lista apenas com números pares, crie outra lista apenas com números ímpares, exiba as duas listas.
+lista = []
+listaPar = []
+listaImpar = []
+
+for i in range(15):
+    numero = int(input("Digite um número inteiro: "))
+    lista.append(numero)
+
+for numero in lista:
+    if numero % 2 == 0:
+        listaPar.append(numero)
+    else:
+        listaImpar.append(numero)
+
+print("Lista de números pares:", listaPar)
+print("Lista de números ímpares:", listaImpar)
