@@ -1,0 +1,13 @@
+#3. Leia 8 números inteiros e armazene-os em uma lista. Em seguida: solicite um número ao usuário, informe se o número está ou não presente na lista.
+lista = []
+
+for i in range(8):
+    numero = int(input("Digite um número inteiro: "))
+    lista.append(numero)
+
+procurar = int(input("Digite um número para procurar na lista: "))
+
+if procurar in lista:
+    print("O número está presente na lista.")
+else:
+    print("O número não está presente na lista.")
