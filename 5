@@ -1,0 +1,21 @@
+#5. Leia 20 números inteiros e armazene-os em uma lista. Depois: conte quantos números são positivos conte quantos são negativos, conte quantos são iguais a zero.
+lista = []
+positivo = 0
+negativo = 0
+zero = 0
+
+for i in range(20):
+    numero = int(input("Digite um número inteiro: "))
+    lista.append(numero)
+
+for numero in lista:
+    if numero > 0:
+        positivo += 1
+    elif numero < 0:
+        negativo += 1
+    else:
+        zero += 1
+
+print("Quantidade de números positivos:", positivo)
+print("Quantidade de números negativos:", negativo)
+print("Quantidade de números iguais a zero:", zero)
