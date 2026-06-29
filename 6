@@ -1,0 +1,28 @@
+#6. Crie duas listas com 5 números cada. Depois: informe quais valores aparecem nas duas listas, informe quais valores são exclusivos de cada lista.
+lista1 = []
+lista2 = []
+comuns = []
+exclusivos1 = []
+exclusivos2 = []
+
+for i in range(5):
+    numero = int(input("Digite um número para a primeira lista: "))
+    lista1.append(numero)
+
+for i in range(5):
+    numero = int(input("Digite um número para a segunda lista: "))
+    lista2.append(numero)
+
+for numero in lista1:
+    if numero in lista2:
+        comuns.append(numero)
+    else:
+        exclusivos1.append(numero)
+
+for numero in lista2:
+    if numero not in lista1:
+        exclusivos2.append(numero)
+
+print("Valores em comum:", comuns)
+print("Exclusivos da primeira lista:", exclusivos1)
+print("Exclusivos da segunda lista:", exclusivos2)
