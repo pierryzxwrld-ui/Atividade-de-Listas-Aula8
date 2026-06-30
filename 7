@@ -1,0 +1,30 @@
+7. Cadastre: nome, preço, quantidade em estoque de 5 produtos utilizando listas. Depois: mostre os produtos com estoque menor que 10, informe o produto mais caro
+nomes = []
+precos = []
+estoques = []
+
+for i in range(5):
+    nome = input("Digite o nome do produto: ")
+    preco = float(input("Digite o preço do produto: "))
+    estoque = int(input("Digite a quantidade em estoque: "))
+
+    nomes.append(nome)
+    precos.append(preco)
+    estoques.append(estoque)
+
+print("Produtos com estoque menor que 10:")
+
+for i in range(5):
+    if estoques[i] < 10:
+        print(nomes[i], "- Estoque:", estoques[i])
+
+maiorPreco = precos[0]
+produtoMaisCaro = nomes[0]
+
+for i in range(5):
+    if precos[i] > maiorPreco:
+        maiorPreco = precos[i]
+        produtoMaisCaro = nomes[i]
+
+print("Produto mais caro:", produtoMaisCaro)
+print("Preço:", maiorPreco)
